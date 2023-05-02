@@ -14,6 +14,17 @@ const router = createRouter({
       name: "about",
       component: () => import("../views/AboutView.vue"),
     },
+    {
+      path: "/agents",
+      name: "AgentsList",
+      component: () => import("../views/agents/AgentsView.vue"),
+    },
+    {
+      path: "/agents/:uuid",
+      name: "AgentDetails",
+      props: true,
+      component: () => import("../views/agents/AgentDetailsView.vue"),
+    },
   ],
 });
 
