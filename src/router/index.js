@@ -25,6 +25,17 @@ const router = createRouter({
       props: true,
       component: () => import("../views/agents/AgentDetailsView.vue"),
     },
+    {
+      path: "/bundles",
+      name: "BundlesList",
+      component: () => import("../views/bundles/BundlesView.vue"),
+    },
+    {
+      path: "/bundles/:uuid",
+      name: "BundleDetails",
+      props: true,
+      component: () => import("../views/bundles/BundleDetailsView.vue"),
+    },
   ],
 });
 
